@@ -1,0 +1,15 @@
+{
+    "name": "amyousry/php-design-patterns",
+    "description": "implementation of design patterns in php",
+    "require": {
+        "php": "^8.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^8.1"
+      },
+      "autoload": {
+          "psr-4": {
+              "Creational\\": "Creational"
+          }
+      }
+}
