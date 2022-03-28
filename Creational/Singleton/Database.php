@@ -36,3 +36,4 @@ var_dump($db2);
 var_dump($db3);
 
 echo $db->getQuery();
+
