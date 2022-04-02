@@ -21,6 +21,11 @@ class Database
         
     }
 
+    private function __clone()
+    {
+
+    }
+
     public function getQuery()
     {
         return "SELECT * FROM table";
