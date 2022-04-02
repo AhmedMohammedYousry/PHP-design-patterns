@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+
 use Behavioral\Strategy\Base64Encrypt;
 use Behavioral\Strategy\EncryptContext;
 use Behavioral\Strategy\HashEncrypt;
