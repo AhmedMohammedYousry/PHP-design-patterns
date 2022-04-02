@@ -5,7 +5,7 @@ namespace Structural\Decorator;
 class PaintingDecorator implements PaintingInterface
 {
 
-    private $painting;
+    private PaintingInterface $painting;
     public function __construct(PaintingInterface $painting)
     {
         $this->painting = $painting;
