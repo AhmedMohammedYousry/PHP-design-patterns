@@ -1,6 +1,6 @@
 <?php
 
-use Creational\Builder\Models;
+namespace Creational\Builder\Models;
 
 class BenzCar extends Car{
     private $data=[];
