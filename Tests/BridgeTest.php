@@ -15,7 +15,7 @@ class BridgeTest extends TestCase
         $carColor = new BlueCar();
         $bmwCar = new BMWCar($carColor);
 
-        $this->assertEquals('the car type is BMW and the care color is blue',$bmwCar->getProduct());
+        $this->assertEquals('the car type is BMW and the car color is blue',$bmwCar->getProduct());
     }
 
     public function testCanCreateRedBMWCar()
@@ -23,7 +23,7 @@ class BridgeTest extends TestCase
         $carColor = new RedCar();
         $bmwCar = new BMWCar($carColor);
 
-        $this->assertEquals('the car type is BMW and the care color is red',$bmwCar->getProduct());
+        $this->assertEquals('the car type is BMW and the car color is red',$bmwCar->getProduct());
     }
 
     public function testCanCreateBlueBENZCar()
@@ -31,7 +31,7 @@ class BridgeTest extends TestCase
         $carColor = new BlueCar();
         $car = new BENZCar($carColor);
 
-        $this->assertEquals('the car type is BENZ and the care color is blue',$car->getProduct());
+        $this->assertEquals('the car type is BENZ and the car color is blue',$car->getProduct());
     }
 
     public function testCanCreateRedBENZCar()
@@ -39,7 +39,7 @@ class BridgeTest extends TestCase
         $carColor = new RedCar();
         $car = new BENZCar($carColor);
 
-        $this->assertEquals('the car type is BENZ and the care color is red',$car->getProduct());
+        $this->assertEquals('the car type is BENZ and the car color is red',$car->getProduct());
     }
 
 }
