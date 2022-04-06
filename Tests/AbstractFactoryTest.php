@@ -11,18 +11,21 @@ class AbstractFactoryTest extends TestCase {
 
 /** @test */
     public function testCanCreateBMWCar(){
-        $carFactory = new CarAbstractFactory(300000);
+        $carFactory = new CarAbstractFactory();
         $myCar = $carFactory->createBMWCar();
 
-        $this->assertInstanceOf(BMWCar::class, $myCar);
+        self::assertInstanceOf(BMWCar::class, $myCar);
+
+        self::assertEquals($myCar->calculatePrice(), 150000);
     }
 
 /** @test */
     public function testCanCreateBenzCar(){
-        $carFactory = new CarAbstractFactory(200000);
+        $carFactory = new CarAbstractFactory(50000);
         $myCar = $carFactory->createBenzCar();
 
         $this->assertInstanceOf(BenzCar::class, $myCar);
+        self::assertEquals($myCar->calculatePrice(), 250000);
     }
 
 }

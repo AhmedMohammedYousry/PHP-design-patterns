@@ -8,13 +8,13 @@ class CarPool {
     /**
      * @var Car []
      */
-    private $freeCars = [];
+    private array $freeCars = [];
     /**
      * @var Car []
      */
-    private $busyCars = [];
+    private array $busyCars = [];
 
-    public function rentCar()
+    public function rentCar(): Car
     {
         if(count($this->freeCars) == 0)
         {
@@ -39,12 +39,13 @@ class CarPool {
         }
     }
 
-    public function getReport() : int
+    public function getAllCars() : int
     {
         return count($this->freeCars) + count($this->busyCars);
     }
 
-    public function getFreeCount() {
+    public function getFreeCount(): int
+    {
         return count ($this->freeCars);
     }
 }

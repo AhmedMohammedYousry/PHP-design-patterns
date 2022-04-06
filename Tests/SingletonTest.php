@@ -14,6 +14,7 @@ class SingletonTest extends TestCase
         $secondCall = Database::getInstance();
 
         $this->assertInstanceOf(Database::class, $firstCall);
+        $this->assertInstanceOf(Database::class, $secondCall);
         $this->assertSame($firstCall, $secondCall);
     }
 }

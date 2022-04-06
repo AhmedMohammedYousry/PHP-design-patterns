@@ -10,6 +10,6 @@ class ManualCarPrototype extends AbstractCarPrototype
 
     public function __clone()
     {
-        
+
     }
 }

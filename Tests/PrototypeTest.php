@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class PrototypeTest extends TestCase{
 
+
     public  function testCanCreateAutomaticCarsWithClone()
     {
         $automaticProtoTypeCar = new AutoCarProtoType();

@@ -13,15 +13,13 @@ class PoolTest extends TestCase{
 
     protected function setUp(): void
     {
-        parent::setUp();
         $this->carPool = new CarPool;
-
     }
 
     public function testCanRentCar() {
         $myCar = $this->carPool->rentCar();
         $this->assertInstanceOf(Car::class, $myCar);
-        $this->assertEquals(1, $this->carPool->getReport());
+        $this->assertEquals(1, $this->carPool->getAllCars());
     }
 
     public function testCanFreeCar() {
@@ -30,7 +28,7 @@ class PoolTest extends TestCase{
         $this->assertEquals(0, $this->carPool->getFreeCount());
 
         $this->carPool->freeCar($myCar);
-        $this->assertEquals(2,$this->carPool->getReport());
+        $this->assertEquals(2,$this->carPool->getAllCars());
         $this->assertEquals(1, $this->carPool->getFreeCount());
     }
 

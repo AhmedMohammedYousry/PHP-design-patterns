@@ -4,17 +4,16 @@ namespace Creational\AbstractFactory;
 
 class BenzCar implements CarInterface{
 
-    private $price;
+    const PRICE = 200000;
     private $tax;
 
-    public function __construct($price, $tax)
+    public function __construct($tax)
     {
-        $this->price = $price;
-        $this->price = $tax;
+        $this->tax = $tax;
     }
 
     public function calculatePrice() {
-        return $this->price + $this->tax + 200000;
+        return self::PRICE + $this->tax ;
     }
 
 }

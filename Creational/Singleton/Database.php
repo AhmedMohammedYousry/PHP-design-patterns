@@ -2,11 +2,11 @@
 
 namespace Creational\Singleton;
 
-class Database 
+final class Database
 {
-    public static $instance;
+    private static Database $instance;
 
-    public static function getInstance()
+    public static function getInstance(): Database
     {
         if(!isset(self::$instance))
         {

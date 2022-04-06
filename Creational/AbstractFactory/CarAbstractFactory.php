@@ -4,20 +4,19 @@ namespace Creational\AbstractFactory;
 
 class CarAbstractFactory {
 
-    private $tax = 100000;
-    private $price;
+    private $tax ;
 
-    public function __construct($price)
+    public function __construct($tax = 0)
     {
-        $this->price = $price;
+        $this->tax = $tax;
     }
 
     public function createBMWCar() : BMWCar {
-        return new BMWCar($this->price);
+        return new BMWCar();
     }
 
     public function createBenzCar() : BenzCar {
-        return new BenzCar($this->price, $this->tax);
+        return new BenzCar($this->tax);
     }
 
 }

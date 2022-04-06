@@ -12,8 +12,17 @@ class Car {
     {
         $this->rentAt = new DateTime();
     }
-    public function moveCar(){
+    public function moveCar(): string
+    {
         return "car is moving";
 
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function getRentAt(): DateTime
+    {
+        return $this->rentAt;
     }
 }

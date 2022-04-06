@@ -2,7 +2,7 @@
 
 namespace Structural\Adapter;
 
-class turboEngineAdapter implements TurboInterface
+class TurboEngineAdapter implements EngineInterface
 {
     private $engine;
 
@@ -11,7 +11,8 @@ class turboEngineAdapter implements TurboInterface
         $this->engine = $engine;
     }
 
-    public function startTurbo()
+
+    public function startEngine()
     {
         return $this->engine->startTurbo();
     }
